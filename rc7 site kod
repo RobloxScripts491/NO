@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <title>Download RC7</title>
+  <style>
+    body {
+      background: #ffffff; /* Arka plan beyaz */
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+      font-family: Arial, sans-serif;
+    }
+
+    .nice-button {
+      background: linear-gradient(45deg, #00c6ff, #0072ff);
+      border: none;
+      color: white;
+      padding: 20px 40px;
+      font-size: 20px;
+      border-radius: 10px;
+      cursor: pointer;
+      box-shadow: 0 8px 20px rgba(0, 114, 255, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.2s ease;
+      text-decoration: none;
+    }
+
+    .nice-button:hover {
+      transform: scale(1.05);
+      box-shadow: 0 10px 25px rgba(0, 114, 255, 0.6);
+    }
+  </style>
+  <script>
+    // Sağ tıkı devre dışı bırak
+    document.addEventListener('contextmenu', function(e) {
+      e.preventDefault();
+    });
+
+    // Geliştirici araçlarına erişimi engelle
+    document.onkeydown = function(e) {
+      if (e.key === "F12" || 
+         (e.ctrlKey && e.shiftKey && (e.key === "I" || e.key === "J")) || 
+         (e.ctrlKey && e.key === "U")) {
+        return false;
+      }
+    };
+  </script>
+</head>
+<body>
+  <a class="nice-button" href="https://github.com/RobloxScripts490/rc7/raw/refs/heads/main/RC7%20Bootstrapper.exe">
+    Download RC7
+  </a>
+</body>
+</html>
